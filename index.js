@@ -12,7 +12,7 @@ app.use( express.json() )
 
 
 app.get( '/', ( req, res ) => {
-    res.status( 200 ).send( { messege: "Mentor and Student Assigning with Database" } )
+    res.status( 200 ).send("Mentor and Student Assigning with Database")
 })
 
 connectDB();
