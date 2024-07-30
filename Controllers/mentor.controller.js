@@ -51,3 +51,14 @@ export const assignedStudent = async ( req, res ) => {
         console.log(error)
     }
 };
+
+export const getAllMentors = async ( req, res ) => {
+    try {
+        const mentors = await Mentors.find()
+        res.status( 200 ).json( { messege: "Mentors Data send Succesfully", data: mentors } )
+
+    } catch ( error ) {
+        console.log( error )
+    }
+
+}

@@ -64,3 +64,13 @@ export const previesMentor = async ( req, res ) => {
     }
 }
 
+export const getAllStudents =async ( req, res ) => {
+  try {
+    const students = await Students.find()
+    res.status( 200 ).json( { messege: "Students Data send Succesfully", data: students } )
+    
+  } catch (error) {
+    console.log(error)
+  }
+  
+}
